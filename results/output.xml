@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230616 10:21:28.855" rpa="false" schemaversion="4">
+<suite id="s1" name="Robot Framework" source="C:\Users\Antwan.Maddox\source\repos\Sandbox\Robot Framework">
+<suite id="s1-s1" name="Hello" source="C:\Users\Antwan.Maddox\source\repos\Sandbox\Robot Framework\hello.robot">
+<test id="s1-s1-t1" name="TestCase" line="5">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://www.google.com</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230616 10:21:29.001" level="INFO">Opening browser 'Chrome' to base url 'http://www.google.com'.</msg>
+<msg timestamp="20230616 10:21:29.001" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230616 10:21:29.001" level="FAIL">TypeError: WebDriver.__init__() got an unexpected keyword argument 'service_log_path'</msg>
+<status status="FAIL" starttime="20230616 10:21:29.000" endtime="20230616 10:21:29.004"/>
+</kw>
+<status status="FAIL" starttime="20230616 10:21:29.000" endtime="20230616 10:21:29.004">TypeError: WebDriver.__init__() got an unexpected keyword argument 'service_log_path'</status>
+</test>
+<status status="FAIL" starttime="20230616 10:21:28.872" endtime="20230616 10:21:29.006"/>
+</suite>
+<status status="FAIL" starttime="20230616 10:21:28.859" endtime="20230616 10:21:29.010"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Robot Framework">Robot Framework</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Hello">Robot Framework.Hello</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
