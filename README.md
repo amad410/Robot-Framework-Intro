@@ -189,6 +189,8 @@ This library provides means for pausing the test or task execution and getting i
 ### Operating System Library
 This library enables various operating system related tasks to be performed in the system where Robot Framework is running. It can, among things, execute commands (run), creatre and remove files and directories, check whether files or directors exist or contain something (i.e., File Shoul Exist, Directory Should Be Empty)
 
+### Database Library
+You can find more information [here](https://docs.robotframework.org/docs/different_libraries/database). The Database Library is a Robot Framework library that provides keywords for interacting with databases.
 
 ### Appium Libraries
 You can find more information about the Appium libraries [here](https://github.com/serhatbolsu/robotframework-appiumlibrary)
@@ -863,3 +865,4 @@ NOTE: You will need the entire file or set of test cases together.
   - [Cucumber for Robot Framework](https://pypi.org/project/gherkin2robotframework/)
   - [WebDriver Manager Implementation](https://haibgit.blogspot.com/2021/06/how-to-use-webdrivermanager-in.html)
   - [Requests Library in Robot Framework](https://supanidaplangmanothirakul.medium.com/robot-framework-with-requestslibrary-1456295c8175)
+  - [Python Linters](https://geekflare.com/python-linter-platforms/)
