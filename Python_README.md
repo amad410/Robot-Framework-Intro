@@ -1635,9 +1635,78 @@ isinstance(m,Motorcycle)  # will be True
 
 ## Multiple Inheritance
 
+```
+class Father(): 
+    def gardening(self):
+        print("I enjoy gardening")
+
+class Mother(): 
+    def cooking(self):
+        print("I enjoy cooking")
+
+class Child(Father, Mother):
+    def sports(self):
+        print("I enjoy sports")
+
+c = Child()
+c.gardening()
+c.cooking()
+c.sports()
+
+```
+
+## Raise Exceptions and Finally
+
+### Raising builtin Exception
+
+More information on exceptions [here](https://docs.python.org/3/library/exceptions.html). All classes are derived from class Exception. However, it is best practice to handle the specific exception under context. 
+
+```
+try:
+    raise MemoryError('memory error')
+
+except MemoryError as e:
+    print(e)
 
 
-## Raise Exceptions
+```
+
+
+### Raising user defined Exceptions
+
+```
+class CustomException(Exception):
+    def__init__(self,msg):
+        self.msg = msg
+    def handle(self):
+        print("User defined exception: ", self.msg)
+
+try:
+    raise CustomException('crash between items')
+
+except CustomException as e:
+    e.handle()
+
+
+```
+
+### Finally
+
+```
+def process_file()
+    try:
+        f=open("c:\\code\\data.txt")
+        x=1/0
+    except FileNotFoundError as e:
+        print("inside except")
+    finally:
+        print("closing file")
+        f.close()
+
+
+```
+
+
 
 ## Iterators
 
@@ -2048,9 +2117,113 @@ secrets=dontenv_values(".env.qa")
 print(secrets["API_KEY"])
 ```
 
+## Connecting to SQL Server using Python
+
+There are different libraries that can be used. One of which is _pypyodbc_.  
+
+Install it on Windows:
+```
+pip install pypyodbc
+
+```
+
+Install it on MAC:
+```
+pip3 install pypyodbc
+
+```
+Then import and use. If you need to provide a user name and password, they are additional items you need to include in connection string. If not, then dont use. 
+
+```
+import pypyodbc as odbc
+
+DRIVER_NAME = 'SQL SERVER'
+SERVER_NAME = 'servername'
+DB_NAME = 'databasename'
+
+connection_string = f"""
+    DRIVER={{{DRIVER_NAME}}};
+    SERVER={SERVER_NAME};
+    DATABASE={DB_NAME};
+    Trust_Connection=yes;
+    uid=<username>;
+    pwd=<password>
+"""
+
+connection = odbc.connect(connection_string)
+print(connection)
+
+```
+
+### Connect to MySQL using Python
+
+Install it on Windows:
+```
+pip install mysql-connector
+
+```
+
+Install it on MAC:
+```
+pip3 install mysql-connector
+
+```
+Then import and use. If you need to provide a user name and password, they are additional items you need to include in connection string. If not, then dont use.   Alternatively, you may need to provide the port. 
+
+```
+import mysql.connector
+
+mydb = mysql.connector.connect(host="", user="", password="", )
+
+mycursor = mydb.cursor()
+mycursor.execute("show databases")
+
+for i in mycursor
+    print(i)
+
+mycursor.execute("select * from student")
+
+```
+
+output:
+```
+('information_schema',)
+('mysql',)
+('performance_schema',)
+('sys',)
+('world',)
+('telusko',)
+
+
+```
+
+
+```
+import mysql.connector
+
+mydb = mysql.connector.connect(host="", user="", password="", databas="telusko" )
+
+mycursor = mydb.cursor()
+
+mycursor.execute("select * from student")
+result = mycursor.fetchall()
+# result = mycursor.fetchone()  //will fetch only 1 result
+
+for i in result
+    print(i)
+
+```
+
+output:
+```
+navin
+vsit
+
+```
 # Resources
  - [OpenAI for Python](https://www.geeksforgeeks.org/openai-python-api/)
  - [Data Analysis](https://www.geeksforgeeks.org/data-analysis-tutorial/)
  - [Pandas AI: The Generative AI Library](https://www.geeksforgeeks.org/pandas-ai/)
  - [Python Linters](https://geekflare.com/python-linter-platforms/)
  - [Handling Secrets in Python](https://blog.gitguardian.com/how-to-handle-secrets-in-python/)
+ - [Formatting string using F string](https://realpython.com/python-f-strings/)
