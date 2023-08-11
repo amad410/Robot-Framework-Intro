@@ -1730,6 +1730,207 @@ print(increment(2))
 
 ```
 
+## Importing Modules
+You can import custom modules
+
+```
+import module_name
+
+# then you can use the module's functions
+
+module_name.[function]
+
+
+```
+or you can short the name of modules you are using (i.e., numpy, etc.)
+```
+import module_name as mm
+
+# then you can use the module's functions
+
+mm.[function]
+
+
+```
+
+or you can import the specific function of that module itself
+
+```
+# importing a specific function of that module
+from module_name import find_index
+
+# then you can use the specific module's functions
+
+find_index()
+
+```
+
+```
+# importing a specific functions of that module
+from module_name import find_index, test
+
+# then you can use the specific module's functions
+
+find_index()
+test()
+
+```
+
+You can also import everything
+
+
+```
+# importing everything in that module
+from module_name import *
+
+# then you can use the specific module's functions
+
+find_index()
+test()
+
+```
+
+You can import other out of the box modules too:
+ - datetime
+ - calendar
+ - math
+ - random
+ - os
+ - hashlib
+ - webbrowser
+
+## Map, Filter, Reduce Functions
+
+## Decorators
+
+
+## Lambda Expressions Functions
+Suppose you want to write a function that computes the value 3x+1, you would nornally create a function. Labda functions are useful when you need a short throwaway function, and where you would only use it once. Common application are sorting and filtering data. 
+
+```
+def f(x):
+    return 3 * x + 1
+
+f(2)
+
+```
+Output
+
+```
+7
+
+```
+
+Now we will do this using an anonymous function or lambda expression
+
+```
+
+g = lambda x: 3*x + 1
+
+g(2)
+
+
+```
+Output
+
+```
+7
+
+```
+### Lambda expression with multiple inputs
+More information can be found [here](https://youtu.be/Ob9rY6PQMfI).  Here are some examples
+
+```
+
+getfullname = lambda full,last: full.strip().title() + " " + last.strip().title()
+
+getfullname("  John", "Smith")
+
+
+```
+Output
+
+```
+'John Smith'
+
+```
+
+You can also do
+
+```
+def build_quadratic_function(a,b,c):
+    # Returns the function f(x) = ax^2 + bx + c
+    return lambda x: a*x**2 + b*x + c
+
+f = build_quadratic_function(2,3,-5)
+
+
+```
+
+### Sorting a list of tuples using Lambda
+```
+list1 = [('honey', 9.70), ('eggs',4.25)]
+list1.sort(key = lambda x: x[0])
+print(list1)
+```
+
+output:
+```
+[('eggs',4.25), ('honey', 9.70)]
+```
+
+### Sorting a list of Dictionaries using Lambda
+
+```
+list1 = [{'make': 'Ford', 'model': 'Focus', 'year': 2012},{make': 'Tesla', 'model': 'x', 'year': 1999}]
+list2 = sorted(list1, key = lambda x: x['year'])
+print(list2)
+```
+
+output:
+```
+[{make': 'Tesla', 'model': 'x', 'year': 1999}, {'make': 'Ford', 'model': 'Focus', 'year': 2012}]
+```
+
+### Finding even numbers using Lambda
+
+```
+list1 = [1,2,3,4,5,6]
+list2 = list(filter(lambda x: x%2 == 0, list1))
+print(list2)
+```
+
+output:
+```
+[2,4,6]
+```
+
+### Finding odd numbers using Lambda
+
+```
+list1 = [1,2,3,4,5,6]
+list2 = list(filter(lambda x: x%2 == 1, list1))
+print(list2)
+```
+
+output:
+```
+[1,3,5]
+```
+
+### Map Function on a List using Lambda
+
+```
+list1 = [1,2,3,4,5,6]
+list2 = list(map(lambda x: x**2, list1))
+print(list2)
+```
+
+output:
+```
+[1,4,9,16,25,36]
+```
+
 ## Managing secrets
 Never put secrets (i.e., username and password credentials, secrety token keys, database access keys, etc) directly in code. 
 
