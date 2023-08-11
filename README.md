@@ -865,4 +865,7 @@ NOTE: You will need the entire file or set of test cases together.
   - [Cucumber for Robot Framework](https://pypi.org/project/gherkin2robotframework/)
   - [WebDriver Manager Implementation](https://haibgit.blogspot.com/2021/06/how-to-use-webdrivermanager-in.html)
   - [Requests Library in Robot Framework](https://supanidaplangmanothirakul.medium.com/robot-framework-with-requestslibrary-1456295c8175)
-  - [Python Linters](https://geekflare.com/python-linter-platforms/)
+   - [GitLab and Robot Framework](https://pradappandiyan.medium.com/running-a-robot-framework-test-on-gitlab-and-deploying-the-report-db2ea18cc082)
+ - [Robot Framework Gitlab Pipeline](https://medium.com/@fx_s/gitlab-ci-cd-and-robot-framework-d0ffbd2a76da)
+ - [Robot Framework Tests in GitLab CI/CD](https://qaautomation.expert/2023/06/06/run-robot-framework-tests-in-gitlab-ci-cd/#step-9-run-the-tests-in-the-gitlab-pipeline)
+ - [Robot Framework Gitlab CI/CD example](https://github.com/robotframework/ci-cd-examples/blob/main/.gitlab-ci.yml)

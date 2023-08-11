@@ -1636,6 +1636,7 @@ isinstance(m,Motorcycle)  # will be True
 ## Multiple Inheritance
 
 
+
 ## Raise Exceptions
 
 ## Iterators
@@ -1648,10 +1649,207 @@ isinstance(m,Motorcycle)  # will be True
 
 ## Loops
 
+## Functions
 
-## Return Statement
+```
+
+def greeting():
+    return "hello"
+
+print(greeting())
+
+```
+### Parameters and Arguments
+
+```
+def greet(first_name, last_name):
+    print(f"Hi {first_name} {last_name}")
+
+greet("Moses", "Malone")
+```
+
+### Number of Arguments using asterix and **args
+
+If you are passing multiple arguments, you can use an asterix to denote multiple arguments
+
+```
+
+def numbers(*numbers)
+    print(numbers)
+
+numbers(2,3,4,5)
+
+```
+
+We could also do
+
+```
+def multiply(*numbers)
+    total = 1
+    for number in numbers:
+        total = total * number
+    return total
+
+numbers(2,3,4,5)
+
+```
+You can also the **args to pass multiple keyword arguments
+
+```
+def save_user(**user)
+    print(user)
+
+save_user(id=1,name="john", age=22)
+
+```
+
+output:
+```
+{'id': 1, 'name': 'John', 'age': 22}
+
+```
+### Return Statement
+
+```
+
+def cube(num):
+    return num * num * num
+
+calculation = cube(3)
+print(calculation)
+
+```
+
+### Optional Parameters
+
+```
+def increment(number, by=1):
+    return number * by
+
+print(increment(2))
+
+```
+
+## Managing secrets
+Never put secrets (i.e., username and password credentials, secrety token keys, database access keys, etc) directly in code. 
+
+### Using Environment Variable
+There are many ways to store secrets starting with using environment variables.
+
+Once you have setup the environment variable, for example in Windows, you can retrieve the environment variable in code as such:
+
+```
+import os
+
+db_user = os.environ.get('DB_USER')
+db_password = os.environ.get('DB_PASSWORD')
+
+```
+
+Alternatively, you could convert variable you have stored as secrets using the export command
+
+```
+export DB_USER=amad
+
+export DB_PASSWORD=1234
+
+```
+
+Then you can type _env_ in command line to see these environment variables
+```
+env
+```
+
+Then import the OS module and start accessing the keys
+
+```
+import os
+
+db_user = os.getenv('DB_USER')
+db_password = os.getenv('DB_PASSWORD')
+
+```
+
+However, the problem is if you run this the first time the environments will be accessible.  But spawning a new terminal and running the code the environments go away and you will have to reapply the environment variables using the export command again
+
+
+### Creating a separate custom python file
+You create a separate _creds.py_ file containing the secrets, and then import that into the file that would use them. 
+
+### Python ENV file
+Another way is to use a .env file.
+
+Installing using windows
+```
+pip install python-dotenv
+
+```
+
+Installing using MAC
+```
+pip3 install python-dotenv
+
+```
+Then you can create a _.env_ file and store secrets there. Then import it. 
+
+```
+from dotenv import load_dotenv
+import os
+
+#LOADING SECRETS
+def configure():
+    load_dotenv()
+
+api_key = is.getenv("API_KEY")
+
+url = f"https://api.openweathermap.org.data/2.5/weather?q=LosAngeles&appid={api_key}"
+
+print(url)
+```
+NOTE: This would not be saved on the server repo, but primarily used for development. You would just need to replicate this on any server you wanted to run this code on.  Please make sure you include the env file in the gitignore file
+
+```
+.env
+```
+
+### Managing Multiple ENV file
+Say for example we have multiple environments (testing, production, etc.), and we want to be able to switch between the secrets we use for the different environments. Using _dotenv_values_ means we can store secrets as a dictionary and use them in our python package
+
+```
+from dotenv import dotenv_values
+
+secrets=dontenv_values(".env")
+
+print(secrets["API_KEY"])
+```
+
+Now we mentioned multiple environemnts. We can create multiple .env files corresponding to an environemnt 
+ - .env.dev
+ - .env.qa
+
+ For dev environment secrets
+
+```
+from dotenv import dotenv_values
+
+secrets=dontenv_values(".env.dev")
+
+print(secrets["API_KEY"])
+```
+
+For qa environment secrets
+
+```
+from dotenv import dotenv_values
+
+secrets=dontenv_values(".env.qa")
+
+print(secrets["API_KEY"])
+```
 
 # Resources
  - [OpenAI for Python](https://www.geeksforgeeks.org/openai-python-api/)
  - [Data Analysis](https://www.geeksforgeeks.org/data-analysis-tutorial/)
  - [Pandas AI: The Generative AI Library](https://www.geeksforgeeks.org/pandas-ai/)
+ - [Python Linters](https://geekflare.com/python-linter-platforms/)
+ - [Handling Secrets in Python](https://blog.gitguardian.com/how-to-handle-secrets-in-python/)
