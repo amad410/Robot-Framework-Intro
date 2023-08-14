@@ -2223,7 +2223,6 @@ output:
 
 ```
 
-
 ## Managing secrets
 Never put secrets (i.e., username and password credentials, secrety token keys, database access keys, etc) directly in code. 
 
@@ -2340,6 +2339,127 @@ secrets=dontenv_values(".env.qa")
 
 print(secrets["API_KEY"])
 ```
+
+## JSON in Python
+JSON is identical to a Python dictionary, and is shorter than XML making it quicker to parse on browsers. This makes it an ideal datasource to share between client and server. Python has a JSON library to send and receive JSON data packets.  Sample JSON data
+
+```
+{
+    "title": "Gattaca", 
+"release_year": 1997
+"is_awesome": true,
+"won_oscar": false,
+"actors": ["Ethan Hawke", "Uma Thurman", "Alan Arkin"
+            "Loren Dean"],
+"budget": null,
+"credits": {
+     "director": "Andrew Niccol",
+        "writer": "Andrew Nicol",
+        "composer": Michael Nyman"
+    }
+       
+}
+
+```
+To interact with JSON, you need for first import the JSON library
+```
+import json
+
+```
+
+### Methods
+The load method allows you to load JSON data from a file or file like object.
+ 
+json.load(f)
+
+The loads method allows you to load JSON data from a string.
+
+json.loads(s)
+
+The dump method will write JSON object to file of file like object.
+
+json.dump(j,f)
+
+The dumps method will output JSON object as a string
+
+json.dumps(j)
+
+#### Loading
+```
+json_file = open("F:/data/movies.txt", "r", encoding="uft-8")
+
+movie = json.load(json_file)
+json_file.close()
+
+print(movie)
+print (movie["title"])
+print (movie["actors"])
+
+```
+
+ - First open the JSON file passing in the path, and since we are only reading just put 'r.'
+ - Use the load method passing the path to the opened file
+ - close the json file
+ - when you print the output, it will be a dictionary of data
+ - because it is a dictionary you can access the data by key. 
+
+```
+
+value = """
+{
+    "title": "Gattaca", 
+"release_year": 1997
+"is_awesome": true,
+"won_oscar": false,
+"actors": ["Ethan Hawke", "Uma Thurman", "Alan Arkin"
+            "Loren Dean"],
+"budget": null,
+"credits": {
+     "director": "Andrew Niccol",
+        "writer": "Andrew Nicol",
+        "composer": Michael Nyman"
+    }
+       
+}"""
+
+tron = json.loads(value)
+print(tron)
+
+```
+- use the loads function if the JSON data arrives in a form of a string. 
+
+### Dumping
+To convert the dictionary output of JSON to valid string, you would use the dumps method
+
+```
+json_file = open("F:/data/movies.txt", "r", encoding="uft-8")
+
+movie = json.load(json_file)
+json_file.close()
+
+json.dumps(movie, ensure_ascii=False)
+
+```
+- to avoid unusual double strokes for non ascii characters, pass in 'ensure_ascii' and set it to false to allows for unicode characters.
+
+
+To dump the JSON data to file, lets declare a new JOSN object
+
+```
+movies2 = {}
+movies2["title"]= "Gattaca", 
+movies2["release_year"]= 1997
+movies2["is_awesome"]= True,
+
+
+file2 = open("F:/data/movies2.txt", "w", encoding="uft-8")
+json.dump(movies2, file2, ensure_ascii=False)
+
+```
+- The create the file and its location
+- Then perform a dump passing in the JSON object and the file.
+
+
 
 ## Connecting to SQL Server using Python
 
