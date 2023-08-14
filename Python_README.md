@@ -312,8 +312,6 @@ output: 11
 output: 0.124449595449
 ```
 
-# Control Flow
-
 ## Comparison Operators
 There are six comparison operators:
  - less than (<)
@@ -1708,15 +1706,78 @@ def process_file()
 
 
 
-## Iterators
+## Iterator Class
 
+```
+
+class RemoteControl():
+
+    def__init__(self):
+        self.channels = ["HBO","CNN", "ABC", "ESPN"]
+        self_index = -1
+    
+    
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        self.index +=1
+
+        if self.index == len(self.channels):
+            raise StopIteration
+        return self.channels[self.index]
+
+
+r = RemoteControl()
+itr = iter(r)
+print(next(itr))
+print(next(itr))
+print(next(itr))
+print(next(itr))
+print(next(itr))
+
+```
+
+output
+
+```
+HBO
+CNN
+ABC
+ESPN
+StopIteration
+
+```
 
 ## Generators
+Generator is a simple way of creating iterator
+
+```
+def remote_control_next():
+    yield "cnn"
+    yield "espn"
+
+itr = remote_control_next()
+
+next(itr)
+next (itr)
 
 
-## Control Flow
+for c in remote_control_next():
+    print(c)
 
-## Loops
+```
+
+output:
+```
+cnn
+espn
+
+
+cnn
+espn
+
+```
 
 ## Functions
 
@@ -1999,6 +2060,169 @@ output:
 ```
 [1,4,9,16,25,36]
 ```
+
+## Map, Filter, and Reduce Functions
+You may work a lot with lists, Python provides functions to streamline working with these data types.  The functions simplify the process in working with list, tuples, and other forms of iteratable data.
+
+### Map
+Suppose you want to compute the area of different circles with radius 'r'.  You may first start out by defining a function for computing the area. Then create a list of radii and then loop through the raddii and passing it the to the area function to get result and append it to a new list.
+
+
+```
+import Math
+
+def area(r):
+    """Area of a circle with radius 'r'."""
+    return math.pi * (r**2)
+
+radii [2,5,7.1,0.3,10]
+
+# Method 1: Direct method
+
+areas = []
+for r in radii:
+    a = area(r)
+    areas.append(a)
+
+print(areas)
+
+
+
+```
+output:
+
+```
+[12.56393939393, 78.93930939393, 158.00220200229, 0.2823030303, 314.159939323929]
+```
+
+BUT with the Map function, you can accomplish this with a single line of code taking in two arguments. The first is a function. The second is your list, tuple, or other iteratable object.  With this method, you can apply a function over a collection of each piece of iteratable data.
+
+Data: a1, a2, ..., 
+Function: f
+map(f, data):
+    Returns iterator over
+    f(a1), f(a2), ...,
+
+```
+
+# Method 2: Map method
+
+map(area, radii)
+list(map(area, radii))
+
+```
+
+output:
+
+```
+<map object at 0x01DA1EB0>
+[12.56393939393, 78.93930939393, 158.00220200229, 0.2823030303, 314.159939323929]
+
+```
+
+An example would be in coverting the degrees from celcius to farenheight using tuple data using this formual
+
+F = 9/5 * C + 32
+
+```
+temps = [("Berlin", 29), ("Cairo", 36), ("Buenos Aires", 19)]
+
+c_to_f = lambda data: (data[0], (9/5)*data[1] + 32)
+
+list(map(c_to_f, temps))
+
+
+```
+output:
+```
+[("Berlin", 84.2), ("Cairo", 96.8), ("Buenos Aires", 66.2)]
+
+```
+### Filter Function
+Used to select certain pieces of data from a list, tuple, or collection of data. Example would be in finding all data above the average.  Just like map(), the first argument is a function. The second argument is the data. The filter function will only return the data for which the function is true. 
+
+```
+import statistics
+
+data = [1.3,2.7, 0.8, 4.1, 4.3, -0.1]
+avg = statistics.mean(data)
+print(avg)
+
+filter(lambda x: x > avg, data)
+print(list(filter(lambda x: x > avg, data)))
+
+```
+
+output:
+```
+2.18333333333
+
+<filter object at 0x01DA1EB0>
+[2.7, 4.1, 4.3]
+
+```
+
+Another example is in removing missing data
+```
+
+countries = ["", "Argentina", "", "Brazil"]
+
+print(list(filter(None, countries)))
+
+
+```
+output:
+```
+["Argentina", "Brazil"]
+```
+
+### Reduce Function
+NOTE: In Python 3+, it is no longer a builtin function. It has been moved to 'functools' module. Use functools.reduce() if you really need it; however, 99% of the time an explicit for loop is more readable. 
+
+Data: [a1, a2, a3,....]
+Function: f(x,y)
+
+reduce(f, data):
+    Step1: va11 = f(a1, a2)
+    Step2: val2 = f(val1, a3)
+    Step3: val3 = f(val2, a4)
+    .
+    .
+    .
+    Step n-1: valn -1 = f(valn-2, a..)
+
+In each step, it applies f to the previous output value and the next term in sequence. Once it has reached the last piece of data it will return the final value
+
+Let's use it
+```
+from functools import reduce
+
+# Multiply all numbers in a list
+
+product = 1
+for x in data:
+    product = product * x
+
+print(product)
+
+
+# Using reduce function
+
+
+data = [2,3,5,7,11,13,17, 19, 23,29]
+multiplier = lambda x, y: x * y
+print(reduce(multiplier, data))
+
+```
+
+output:
+```
+646969320
+
+646969320
+
+```
+
 
 ## Managing secrets
 Never put secrets (i.e., username and password credentials, secrety token keys, database access keys, etc) directly in code. 
