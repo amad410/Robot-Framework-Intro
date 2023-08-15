@@ -838,6 +838,91 @@ NOTE: You will need the entire file or set of test cases together.
 
 ### DELETE
 
+
+## Database
+Generally, if you want to perform database testing using Robot Framework there are two libraries you will need to use:
+ - DatabaseLibrary
+ - pymsql Library
+
+ You can search in Pycharm itself or install via commandline.
+
+ More information [here](https://fanz-see.github.io/Robotframework-Database-Library/api/0.5/DatabaseLibrary.html)
+
+
+ ```
+
+ *** Settings ***
+
+ Library    DatabaseLibrary
+ Library    OperatingSystem
+
+
+ *** Variables ***
+ ${DBName}   mydb
+ ${DBUser}   root
+ ${DBPass}   root
+ ${DBHost}   127.0.0.1
+ ${DBPort}   3306  
+
+ # Connect to database
+
+ Suite Setup    Connect to Database pymsql  ${DBName}   ${DBUser}   ${DBPass}   ${DBHost}   ${DBPort}
+
+ Suite Teardown Disconnect from Database
+
+*** Test Case ***
+Create person table
+    ${output} = Execute SQL String      Create table person(id integer, first_name varchar(20), last_name varchar(20));
+    log to console  ${output}
+    should be equal as strings  ${output}  None
+
+Insert Data in person table
+    # Single record
+    ${output}=  Execute SQL String      Insert into person values(101, "John", "Canady");
+    log to console  ${output}
+    should be equal as strings  ${output}  None
+
+Insert Multiple Records Using a separate SQL script
+    ${output}=  Execute SQL String      ./TestData/mydb_person_insertData.sql
+    log to console  ${output}
+    should be equal as strings  ${output}  None
+
+Check David record present in Person table
+    check if exists in database  select id from mydb.person where first_name="David";
+
+Check George record not present in Person table
+    check if not exists in database  select id from mydb.person where first_name="George";
+
+Check Person table exists in mydb database
+    table must exist    person
+
+Verify row Count is zero
+    row count is 0      Select * from mydb.person where first_name="George";
+
+Verify row Count is equal to some value
+    row count is equal to x     Select * from mydb.person where first_name="George";    1
+
+Verify row Count is greater than some value
+    row count is greater than x     Select * from mydb.person where first_name="David";    0
+
+Update record in person table
+
+    ${output}=  Execute SQL String  Update mydb.person set first_name="Jio" where i=104;
+    log to console ${output}
+    should be equal as strings  ${output}   None
+
+Retrieve Records from Person table
+    # Storing all results in a variable. But not a normal variable. It should be one of list type or dictonary
+    @{queryResults}=  query   Select * from mydb.person;
+    log to console  many  @{queryResults}
+
+Delete Record from Person table
+    ${output}=   Execute SQL String     Delete from mydb.person  
+    should be equal as strings  ${output}   None
+
+ ```
+
+
 # Other References
  - [User Guide](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html) or [here](https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst)
  - [Cheat Sheet](https://robocorp.com/docs/languages-and-frameworks/robot-framework/cheat-sheet)
