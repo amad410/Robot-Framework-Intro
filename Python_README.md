@@ -2571,3 +2571,4 @@ vsit
  - [Python Linters](https://geekflare.com/python-linter-platforms/)
  - [Handling Secrets in Python](https://blog.gitguardian.com/how-to-handle-secrets-in-python/)
  - [Formatting string using F string](https://realpython.com/python-f-strings/)
+ - [Selenium Python Behave](https://www.youtube.com/playlist?list=PLUDwpEzHYYLsARXz1o3Ldt1FnvRbvlxsS)
