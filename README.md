@@ -928,6 +928,7 @@ Delete Record from Person table
 Poetry is a dependency management package that manages your dependencies keeping them up to date [here](https://python-poetry.org/). Here is the [guide](https://python-poetry.org/docs/#installing-with-the-official-installer).
 
 # Other References
+ - [Robot Framework Starter Guide](https://docs.robotframework.org/docs/getting_started/testing#install-python)
  - [User Guide](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html) or [here](https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst)
  - [Cheat Sheet](https://robocorp.com/docs/languages-and-frameworks/robot-framework/cheat-sheet)
  - [Intro to Robot Framework]()(https://yusufsariyildiz35.medium.com/introduction-to-robot-framework-and-selenium-for-test-automation-6d983b0f751c)
