@@ -863,8 +863,10 @@ Generally, if you want to perform database testing using Robot Framework there a
  ${DBPass}   root
  ${DBHost}   127.0.0.1
  ${DBPort}   3306  
-
+```
  # Connect to database
+
+ ```
 
  Suite Setup    Connect to Database pymsql  ${DBName}   ${DBUser}   ${DBPass}   ${DBHost}   ${DBPort}
 
