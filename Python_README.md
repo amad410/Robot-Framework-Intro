@@ -2564,6 +2564,24 @@ navin
 vsit
 
 ```
+# Outputting installed libraries
+From the base folder of your test directory you can run 
+```
+pip freeze
+```
+# Output installed libaries to requirements.txt
+To create a requirements.txt file to share dependencies
+```
+pip freeze > requirements.txt
+```
+Then to see what is in that file
+```
+cat requirements.txt
+```
+
+# Creating virtual environments
+More information on implementation [here](https://www.youtube.com/watch?v=APOPm01BVrk) and introduction [here](https://www.educative.io/answers/how-to-create-a-virtual-environment-in-python?utm_campaign=brand_educative&utm_source=google&utm_medium=ppc&utm_content=performance_max&eid=5082902844932096&utm_term=&utm_campaign=%5BNew%5D+Performance+Max&utm_source=adwords&utm_medium=ppc&hsa_acc=5451446008&hsa_cam=18511913007&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjw_5unBhCMARIsACZyzS1qzJlOOD7nJ7XA7SK5np5O6BMmgTzJbXlnLQLY5ZPR45gTG3aJDPkaAtdfEALw_wcB)
+
 # Resources
  - [OpenAI for Python](https://www.geeksforgeeks.org/openai-python-api/)
  - [Data Analysis](https://www.geeksforgeeks.org/data-analysis-tutorial/)
