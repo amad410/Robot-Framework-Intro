@@ -947,6 +947,9 @@ Poetry is a dependency management package that manages your dependencies keeping
 # IF statements
 More information [here](https://robocorp.com/docs/languages-and-frameworks/robot-framework/conditional-execution)
 
+# Control Room
+More information [here](https://robocorp.com/docs/control-room)
+
 # Other References
  - [Robot Framework Starter Guide](https://docs.robotframework.org/docs/getting_started/testing#install-python)
  - [User Guide](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html) or [here](https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst)
