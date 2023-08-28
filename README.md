@@ -962,6 +962,9 @@ More information [here](https://robocorp.com/docs/control-room)
  - [Handling Failures](https://robocorp.com/docs/development-guide/qa-and-best-practices/how-to-handle-task-failures-tutorial#what-should-i-do-if-my-task-fails-occasionally)
  - [Try/Catch](https://robocorp.com/docs/languages-and-frameworks/robot-framework/try-except-finally-exception-catching-and-handling#examples-of-using-try-except-and-finally-in-robot-framework)
 
+# Development Guide
+This includes information such as RPA, automating excel, email, etc.  All info can be found [here](https://robocorp.com/docs/development-guide)
+
 # Other References
  - [Robot Framework Starter Guide](https://docs.robotframework.org/docs/getting_started/testing#install-python)
  - [User Guide](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html) or [here](https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst)
