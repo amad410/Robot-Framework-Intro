@@ -1011,4 +1011,5 @@ This includes information such as RPA, automating excel, email, etc.  All info c
  - [KubeLibrary: Robot Framework to test Kubernetes Cluster](https://medium.com/humanitec-developers/kubelibrary-6644ca06cea4)
  - [KubeLibrary GitHub](https://github.com/devopsspiral/KubeLibrary)
  - [Robot Framework Integrations with Python Code](https://www.youtube.com/watch?v=k3StO-NCPMw)
+ - [Uploading Files](https://www.youtube.com/watch?v=Ugtb3wnXUYs)
  
