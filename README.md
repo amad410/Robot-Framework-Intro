@@ -149,7 +149,9 @@ There are mainly four built-in tools that are used in robot framework that are:
  - Testdoc – Robot Framework generates high-level HTML documentation based on test cases. The created documentation is in HTML format. 
  - Rebot – Tools to generate logs and reports based on XML output and merge multiple outputs simultaneously. This is used automatically when test reports and logs are generated. XML output files can be post-processed afterwards by the Rebot tool.
  - Tidy – Robot Framework Tools for cleaning and changing the format of data files.
- - Libdoc – Tools for generating keyword documentation for libraries and resource files.  It can generate HTML documentation for humans as well as machines readable spec files in XML and JSON formats. 
+ - Libdoc – Tools for generating keyword documentation for libraries and resource files.  It can generate HTML documentation for humans as well as machines readable spec files in XML and JSON formats.
+
+ More information can be found at this [location](https://robocorp.com/docs/libraries/built-in)
 
 ### String Libraries
 Library for generating, modifying and verifying strings. You can find more information about the string libraries 
