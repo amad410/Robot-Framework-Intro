@@ -308,6 +308,12 @@ Using Variables
     ${color}=   Set Variable    Green
     Log to Console  My name is ${name} and my favorite color is ${color}
 ```
+### Different Types of Variables
+ - ${variable_name} # this is a scalar variable
+ - @{variable_name} # this is a list variable
+ - &{variable_name} $ this is a dictionary variable
+
+More information [here](https://www.youtube.com/watch?v=DJ1a2k4hU4U)
 
 ## Resources Files
 Files used to store reusable functions and variables. 
