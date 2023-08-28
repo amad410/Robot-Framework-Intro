@@ -939,6 +939,11 @@ Poetry is a dependency management package that manages your dependencies keeping
  - using in a virtualized environment [here](https://www.youtube.com/watch?v=ed2NGpsws8Y)
  - Reading Environment variables (Python Dotenv, Python Decouple And Pydantic) [here](https://www.youtube.com/watch?v=A1OA0Y9vwJY)
 
+# Writing custom python scripts
+ -Sample code [here](https://www.programcreek.com/python/)
+ - Using Scripts [here](https://www.youtube.com/watch?v=Y8pD5-SP_0c)
+ - Selenium From scratch using Python Code Example [here](https://www.youtube.com/playlist?list=PLUDwpEzHYYLt2RzOb-_eafLAP0VSoyJhf)
+
 # Other References
  - [Robot Framework Starter Guide](https://docs.robotframework.org/docs/getting_started/testing#install-python)
  - [User Guide](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html) or [here](https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst)
