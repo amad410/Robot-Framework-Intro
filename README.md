@@ -1008,4 +1008,6 @@ This includes information such as RPA, automating excel, email, etc.  All info c
  - [Robot Framework Tests in GitLab CI/CD](https://qaautomation.expert/2023/06/06/run-robot-framework-tests-in-gitlab-ci-cd/#step-9-run-the-tests-in-the-gitlab-pipeline)
  - [Robot Framework Gitlab CI/CD example](https://github.com/robotframework/ci-cd-examples/blob/main/.gitlab-ci.yml)
  - [API Testing using Python](https://www.youtube.com/playlist?list=PLIMhDiITmNrILoYaVsrxwteH6LqMr07uX)
+ - [KubeLibrary: Robot Framework to test Kubernetes Cluster](https://medium.com/humanitec-developers/kubelibrary-6644ca06cea4)
+ - [KubeLibrary GitHub](https://github.com/devopsspiral/KubeLibrary)
  
