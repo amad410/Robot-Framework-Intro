@@ -98,6 +98,9 @@ In addition, you can visit the official Robot Framework documentation [here](htt
 ```
 robot <testfile.robot>
 ```
+## Robot File Structure
+More infomation [here](https://robocorp.com/docs/setup/robot-structure)
+
 ## Settings
 This is where external libraries and resources will go. Some things included
 in this section include:
