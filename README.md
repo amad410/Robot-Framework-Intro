@@ -153,7 +153,7 @@ There are mainly four built-in tools that are used in robot framework that are:
 
 ### String Libraries
 Library for generating, modifying and verifying strings. You can find more information about the string libraries 
-[here](https://robotframework.org/robotframework/latest/libraries/String.html)
+[here](https://robotframework.org/robotframework/latest/libraries/String.html).  Synopsis of this library can be found at this [location](https://robotframework.org/robotframework/2.1.2/libraries/String.html).
 
 ### Screenshot Libraries
 Provides keywords to capture screenshots of the desktop. You can find more information about the screenshot libraries 
@@ -168,7 +168,7 @@ You can find more information about the Requests libraries [here](https://docs.r
 [here](https://github.com/MarketSquare/robotframework-requests#readme)
 
 ### Collections Libraries
-You can find more information anbout Collections libraries [here](https://robotframework.org/robotframework/latest/libraries/Collections.html). It is primarily used to manage data. 
+You can find more information anbout Collections libraries [here](https://robotframework.org/robotframework/latest/libraries/Collections.html). It is primarily used to manage data. Synopsis of the libary can be found at this [location](https://robotframework.org/robotframework/2.1.2/libraries/Collections.html)
 
 ### Pabot Tools
 A parallel executor for Robot Framework tests and tasks. You can find more information
@@ -749,6 +749,8 @@ Play around with dictionaries
 
 ```
 
+## For Loops
+More information [here](https://www.youtube.com/watch?v=mR1CcBCJwpU)
 
 ## API Testing
 To  perform any sort of API testing, you will need to use a library called 'RequestsLibrary.'  More info can be found [here](https://github.com/MarketSquare/robotframework-requests#readme). First install it either through insalling it using Python Interpreter in preferences or settings. OR throgh command line. 
