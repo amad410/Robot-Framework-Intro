@@ -853,7 +853,7 @@ NOTE: You will need the entire file or set of test cases together.
 
 ### Creating API requests through sessions
  - [Get](https://www.youtube.com/watch?v=BW8bxgkSZHQ)
- - Delete](https://www.youtube.com/watch?v=8gf_MdBEwUM)
+ - [Delete](https://www.youtube.com/watch?v=8gf_MdBEwUM)
  - [Post](https://www.youtube.com/watch?v=nrY7usa22Xo)
  - [Put](https://www.youtube.com/watch?v=OyhlXJ_nlQk&list=PLIMhDiITmNrLU5TrWNc7eOaEYJ1w8dBo3&index=5&pp=iAQB)
  - [Validate Response](https://www.youtube.com/watch?v=Mexu6NubeXQ&list=PLIMhDiITmNrLU5TrWNc7eOaEYJ1w8dBo3&index=2&pp=iAQB)
