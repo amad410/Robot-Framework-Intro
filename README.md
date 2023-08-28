@@ -851,6 +851,13 @@ NOTE: You will need the entire file or set of test cases together.
 
 ### DELETE
 
+### Creating API requests through sessions
+ - [Get](https://www.youtube.com/watch?v=BW8bxgkSZHQ)
+ - Delete](https://www.youtube.com/watch?v=8gf_MdBEwUM)
+ - [Post](https://www.youtube.com/watch?v=nrY7usa22Xo)
+ - [Put](https://www.youtube.com/watch?v=OyhlXJ_nlQk&list=PLIMhDiITmNrLU5TrWNc7eOaEYJ1w8dBo3&index=5&pp=iAQB)
+ - [Validate Response](https://www.youtube.com/watch?v=Mexu6NubeXQ&list=PLIMhDiITmNrLU5TrWNc7eOaEYJ1w8dBo3&index=2&pp=iAQB)
+
 
 ## Database
 Generally, if you want to perform database testing using Robot Framework there are two libraries you will need to use:
@@ -1000,4 +1007,5 @@ This includes information such as RPA, automating excel, email, etc.  All info c
  - [Robot Framework Gitlab Pipeline](https://medium.com/@fx_s/gitlab-ci-cd-and-robot-framework-d0ffbd2a76da)
  - [Robot Framework Tests in GitLab CI/CD](https://qaautomation.expert/2023/06/06/run-robot-framework-tests-in-gitlab-ci-cd/#step-9-run-the-tests-in-the-gitlab-pipeline)
  - [Robot Framework Gitlab CI/CD example](https://github.com/robotframework/ci-cd-examples/blob/main/.gitlab-ci.yml)
+ - [API Testing using Python](https://www.youtube.com/playlist?list=PLIMhDiITmNrILoYaVsrxwteH6LqMr07uX)
  
