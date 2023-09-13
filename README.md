@@ -975,6 +975,9 @@ More information [here](https://robocorp.com/docs/control-room)
 # Development Guide
 This includes information such as RPA, automating excel, email, etc.  All info can be found [here](https://robocorp.com/docs/development-guide)
 
+# Setting up QWeb (A UI Library for testing)
+Here is an introduction of QWeb for Robot Framework [here](https://pypi.org/project/QWeb/1.0.0/). The complete documentation is [here](https://github.com/qentinelqi/qweb/)
+
 # Other References
  - [Robot Framework Starter Guide](https://docs.robotframework.org/docs/getting_started/testing#install-python)
  - [User Guide](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html) or [here](https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst)
