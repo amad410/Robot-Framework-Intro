@@ -98,6 +98,9 @@ In addition, you can visit the official Robot Framework documentation [here](htt
 ```
 robot <testfile.robot>
 ```
+## Robot File Structure
+More infomation [here](https://robocorp.com/docs/setup/robot-structure)
+
 ## Settings
 This is where external libraries and resources will go. Some things included
 in this section include:
@@ -149,11 +152,13 @@ There are mainly four built-in tools that are used in robot framework that are:
  - Testdoc – Robot Framework generates high-level HTML documentation based on test cases. The created documentation is in HTML format. 
  - Rebot – Tools to generate logs and reports based on XML output and merge multiple outputs simultaneously. This is used automatically when test reports and logs are generated. XML output files can be post-processed afterwards by the Rebot tool.
  - Tidy – Robot Framework Tools for cleaning and changing the format of data files.
- - Libdoc – Tools for generating keyword documentation for libraries and resource files.  It can generate HTML documentation for humans as well as machines readable spec files in XML and JSON formats. 
+ - Libdoc – Tools for generating keyword documentation for libraries and resource files.  It can generate HTML documentation for humans as well as machines readable spec files in XML and JSON formats.
+
+ More information can be found at this [location](https://robocorp.com/docs/libraries/built-in)
 
 ### String Libraries
 Library for generating, modifying and verifying strings. You can find more information about the string libraries 
-[here](https://robotframework.org/robotframework/latest/libraries/String.html)
+[here](https://robotframework.org/robotframework/latest/libraries/String.html).  Synopsis of this library can be found at this [location](https://robotframework.org/robotframework/2.1.2/libraries/String.html).
 
 ### Screenshot Libraries
 Provides keywords to capture screenshots of the desktop. You can find more information about the screenshot libraries 
@@ -168,7 +173,7 @@ You can find more information about the Requests libraries [here](https://docs.r
 [here](https://github.com/MarketSquare/robotframework-requests#readme)
 
 ### Collections Libraries
-You can find more information anbout Collections libraries [here](https://robotframework.org/robotframework/latest/libraries/Collections.html). It is primarily used to manage data. 
+You can find more information anbout Collections libraries [here](https://robotframework.org/robotframework/latest/libraries/Collections.html). It is primarily used to manage data. Synopsis of the libary can be found at this [location](https://robotframework.org/robotframework/2.1.2/libraries/Collections.html)
 
 ### Pabot Tools
 A parallel executor for Robot Framework tests and tasks. You can find more information
@@ -308,6 +313,12 @@ Using Variables
     ${color}=   Set Variable    Green
     Log to Console  My name is ${name} and my favorite color is ${color}
 ```
+### Different Types of Variables
+ - ${variable_name} # this is a scalar variable
+ - @{variable_name} # this is a list variable
+ - &{variable_name} $ this is a dictionary variable
+
+More information [here](https://www.youtube.com/watch?v=DJ1a2k4hU4U)
 
 ## Resources Files
 Files used to store reusable functions and variables. 
@@ -743,6 +754,8 @@ Play around with dictionaries
 
 ```
 
+## For Loops
+More information [here](https://www.youtube.com/watch?v=mR1CcBCJwpU)
 
 ## API Testing
 To  perform any sort of API testing, you will need to use a library called 'RequestsLibrary.'  More info can be found [here](https://github.com/MarketSquare/robotframework-requests#readme). First install it either through insalling it using Python Interpreter in preferences or settings. OR throgh command line. 
@@ -838,6 +851,13 @@ NOTE: You will need the entire file or set of test cases together.
 
 ### DELETE
 
+### Creating API requests through sessions
+ - [Get](https://www.youtube.com/watch?v=BW8bxgkSZHQ)
+ - [Delete](https://www.youtube.com/watch?v=8gf_MdBEwUM)
+ - [Post](https://www.youtube.com/watch?v=nrY7usa22Xo)
+ - [Put](https://www.youtube.com/watch?v=OyhlXJ_nlQk&list=PLIMhDiITmNrLU5TrWNc7eOaEYJ1w8dBo3&index=5&pp=iAQB)
+ - [Validate Response](https://www.youtube.com/watch?v=Mexu6NubeXQ&list=PLIMhDiITmNrLU5TrWNc7eOaEYJ1w8dBo3&index=2&pp=iAQB)
+
 
 ## Database
 Generally, if you want to perform database testing using Robot Framework there are two libraries you will need to use:
@@ -927,6 +947,37 @@ Delete Record from Person table
 # Dependency Management using Poetry
 Poetry is a dependency management package that manages your dependencies keeping them up to date [here](https://python-poetry.org/). Here is the [guide](https://python-poetry.org/docs/#installing-with-the-official-installer).
 
+# Environment Variables
+ - using in a virtualized environment [here](https://www.youtube.com/watch?v=ed2NGpsws8Y)
+ - Reading Environment variables (Python Dotenv, Python Decouple And Pydantic) [here](https://www.youtube.com/watch?v=A1OA0Y9vwJY)
+
+# Writing custom python scripts
+ -Sample code [here](https://www.programcreek.com/python/)
+ - Using Scripts [here](https://www.youtube.com/watch?v=Y8pD5-SP_0c)
+ - Selenium From scratch using Python Code Example [here](https://www.youtube.com/playlist?list=PLUDwpEzHYYLt2RzOb-_eafLAP0VSoyJhf)
+
+# IF statements
+More information [here](https://robocorp.com/docs/languages-and-frameworks/robot-framework/conditional-execution)
+
+# Control Room
+More information [here](https://robocorp.com/docs/control-room)
+
+# Cheat Sheet
+ - [here](https://robocorp.com/docs/languages-and-frameworks/robot-framework/cheat-sheet)
+
+# Tasks
+- [here](https://robocorp.com/docs/languages-and-frameworks/robot-framework/tasks)
+
+# Handling Failures
+ - [Handling Failures](https://robocorp.com/docs/development-guide/qa-and-best-practices/how-to-handle-task-failures-tutorial#what-should-i-do-if-my-task-fails-occasionally)
+ - [Try/Catch](https://robocorp.com/docs/languages-and-frameworks/robot-framework/try-except-finally-exception-catching-and-handling#examples-of-using-try-except-and-finally-in-robot-framework)
+
+# Development Guide
+This includes information such as RPA, automating excel, email, etc.  All info can be found [here](https://robocorp.com/docs/development-guide)
+
+# Setting up QWeb (A UI Library for testing)
+Here is an introduction of QWeb for Robot Framework [here](https://pypi.org/project/QWeb/1.0.0/). The complete documentation is [here](https://github.com/qentinelqi/qweb/)
+
 # Other References
  - [Robot Framework Starter Guide](https://docs.robotframework.org/docs/getting_started/testing#install-python)
  - [User Guide](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html) or [here](https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst)
@@ -959,4 +1010,9 @@ Poetry is a dependency management package that manages your dependencies keeping
  - [Robot Framework Gitlab Pipeline](https://medium.com/@fx_s/gitlab-ci-cd-and-robot-framework-d0ffbd2a76da)
  - [Robot Framework Tests in GitLab CI/CD](https://qaautomation.expert/2023/06/06/run-robot-framework-tests-in-gitlab-ci-cd/#step-9-run-the-tests-in-the-gitlab-pipeline)
  - [Robot Framework Gitlab CI/CD example](https://github.com/robotframework/ci-cd-examples/blob/main/.gitlab-ci.yml)
+ - [API Testing using Python](https://www.youtube.com/playlist?list=PLIMhDiITmNrILoYaVsrxwteH6LqMr07uX)
+ - [KubeLibrary: Robot Framework to test Kubernetes Cluster](https://medium.com/humanitec-developers/kubelibrary-6644ca06cea4)
+ - [KubeLibrary GitHub](https://github.com/devopsspiral/KubeLibrary)
+ - [Robot Framework Integrations with Python Code](https://www.youtube.com/watch?v=k3StO-NCPMw)
+ - [Uploading Files](https://www.youtube.com/watch?v=Ugtb3wnXUYs)
  
