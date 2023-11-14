@@ -2590,3 +2590,4 @@ More information on implementation [here](https://www.youtube.com/watch?v=APOPm0
  - [Handling Secrets in Python](https://blog.gitguardian.com/how-to-handle-secrets-in-python/)
  - [Formatting string using F string](https://realpython.com/python-f-strings/)
  - [Selenium Python Behave](https://www.youtube.com/playlist?list=PLUDwpEzHYYLsARXz1o3Ldt1FnvRbvlxsS)
+ - [Robot Framework Releases](https://github.com/robotframework/robotframework/blob/master/doc/releasenotes/rf-7.0a1.rst#backwards-incompatible-changes)
