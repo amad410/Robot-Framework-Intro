@@ -2,6 +2,12 @@
 
 This is an introduction of Python for test automation programming.
 
+# Setup
+When it comes to setup follow instructions by Paul Schafer on setting up VScode on Mac for Python. Install Robocorp extension. Setup virtual environment. In addition, navigate to user settings and  set the following
+"robocorp.language-server.python": "${workspaceFolder}/venv/bin/python",
+"robot.language-server.python": "${workspaceFolder}/venv/bin/python",
+
+
 # Variables & Assignments
 
 Variable values are case sensitive. 
@@ -2591,3 +2597,4 @@ More information on implementation [here](https://www.youtube.com/watch?v=APOPm0
  - [Formatting string using F string](https://realpython.com/python-f-strings/)
  - [Selenium Python Behave](https://www.youtube.com/playlist?list=PLUDwpEzHYYLsARXz1o3Ldt1FnvRbvlxsS)
  - [Robot Framework Releases](https://github.com/robotframework/robotframework/blob/master/doc/releasenotes/rf-7.0a1.rst#backwards-incompatible-changes)
+ - [DocStrings](https://www.programiz.com/python-programming/docstrings)
